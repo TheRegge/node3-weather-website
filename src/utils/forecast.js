@@ -12,7 +12,6 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find location')
         } else {
             const currently = body.currently
-            console.log(body.currently)
             callback(undefined, `
                 ${body.daily.data[0].summary}
                 It's currently ${currently.temperature} degrees out.
